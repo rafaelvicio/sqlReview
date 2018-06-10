@@ -44,3 +44,11 @@ update jogadores set time_id = 2 where id = 6;
 select * from times, jogadores;
 select * from jogadores join times on jogadores.time_id = time_id;
 alter table jogadores add FOREIGN key (time_id) REFERENCES times(id);
+
+desc times;
+desc jogadores;
+
+select t.nome from times t;
+select t.nome from times t where exists (select j.id from jogadores j where j.time_id = t.id);
+
+
