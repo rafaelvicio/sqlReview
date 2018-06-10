@@ -15,3 +15,7 @@ select nome, pontos * 1 as tripro from times;
 select * from times where ativo = 0;
 select * from times where pontos > 3;
 select * from times where pontos > 3 AND ativo = 1;
+
+update times set pontos = 11 where id = 1;
+update times set pontos = 11 where id in (1, 2, 3);
+update times set pontos = 10 where not id = 1;
